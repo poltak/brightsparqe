@@ -1,0 +1,267 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$gray-medium-light: #eaeaea;
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  // margin: 0 auto;
+  // width: 70%;
+  // clear: both;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  margin: 0 auto;
+  padding-left: 10px;
+  text-align: left;
+  h1 {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+p,a,h1,h2,h3,h4,h5,h6{
+  font-family: "Trebuchet MS" , Tahoma, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  color: $gray-light;
+}
+
+a{
+  color: $gray-light;
+}
+a:hover{
+  color: $gray-light;
+  text-decoration: none;
+}
+a:link{
+  text-decoration: none;
+}
+
+/* header */
+.page-header{
+  margin-top: 5px;
+  margin-bottom: 0px;
+  img{
+     width: 65%;
+  }
+}
+.logo{
+  display: inline-block;
+  margin-left: 10px;
+}
+.info{
+  // border: 1px solid black;
+  display: inline-block;
+  float: right;
+  padding: 10px;
+  margin-right: 5px
+}
+#topright{
+  // border: 1px solid black;
+  text-align: right;
+}
+#donationToday{
+  // border: 1px solid black;
+  padding: 10px;
+  margin-right: 5px;
+  background-color: #eb348b;
+  color: white;
+  text-decoration: none;
+}
+.social{
+  padding-top: 20px;
+  // border: 1px solid black;
+}
+
+/*navigation*/
+
+.navbar{
+  text-align: center;
+  border: 1px solid black;
+	background-color: #0765c5;
+  .nav{
+  // border: 1px solid black;
+  // margin-left: 10%;
+}
+.nav li{
+  padding-right: 30px;
+}
+  .nav a{
+    color: white
+  }
+  .nav a:hover, .nav .active, .nav a:visited{
+ background-color: #065fb7;
+  color: white;
+}
+
+}
+.navbar-toggle{
+  border: 1px solid black;
+}
+.navbar .navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+
+/*home page*/
+#slider {
+  img{
+  width: 100%;
+  height: 240px;
+}
+}
+.subtitle{
+  font-size: 14px;
+}
+#main-subtitle{
+    font-size: 16px;
+  }
+.content{
+  margin-top: 20px;
+  img{
+    width: 80%;
+  }
+}
+.content_left{
+  display: inline-block;
+  float: left;
+  width: 40%;
+  img{
+    width: 100%;
+  }
+}
+.content_right{ 
+  display: inline-block;
+  width: 50%;
+  float: left;
+  margin-left: 5%;
+  text-align: justify;
+}
+
+.form-horizontal{
+  margin-top: 20px;
+  background-color: $gray-light;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  color: white;
+  width: 75%;
+}
+#form_social{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  p{
+    font-size: 1.1em;
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 150px) and (max-width: 525px){
+  .page-header{
+  margin-top: 5px;
+  margin-bottom: 0px;
+  img{
+     width: 100%;
+  }
+}
+  .logo{
+  display: inline-block;
+  margin-left: 0px;
+  width: 180px;
+}
+  #donationToday{
+    display: block;
+    margin-bottom: 2px;
+  }
+  .social{
+    padding-top: 0px;
+  }
+  .info{
+    padding-bottom: 0px;
+  }
+  .navbar{
+  text-align: center;
+  border: 1px solid black;
+  background-color: #0765c5;
+  .nav{
+  // border: 1px solid black;
+  margin-left: 0;
+}
+.nav li{
+  padding-right: 0;
+}
+  .nav a{
+    color: white
+  }
+  .nav a:hover, .nav .active, .nav a:visited{
+ background-color: #065fb7;
+  color: white;
+}
+}
+.form-horizontal{
+  width: 100%;
+}
+}
+
+
