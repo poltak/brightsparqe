@@ -3,6 +3,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def index
+    redirect_to '/'
+  end
+
   def show
     @user = User.find(params[:id])
   	debugger #press control+d exit debugger
@@ -12,9 +16,11 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
 
   	if @user.save
-  		render 'static_pages/about'
+      flash[:success] = "sucess..."
+  		render 'show'
   	else 
-  		redirect_to '/'
+  		# redirect_to '/'
+      render 'static_pages/home'
   	end
   end
 

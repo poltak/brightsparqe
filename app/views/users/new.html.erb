@@ -2,14 +2,16 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
 <%= form_for(@user) do |f| %> 
-<%= f.label :fname %>
-<%= f.text_field :fname %>
-<%= f.label :lname %>
-<%= f.text_field :lname %>
+<%= f.label :First_Name %>
+<%= f.text_field :fname , class: 'form-control' %>
+<%= f.label :Last_Name %>
+<%= f.text_field :lname , class: 'form-control' %>
 <%= f.label :email %>
-<%= f.email_field :email %>
+<%= f.email_field :email, class: 'form-control'  %>
 <%= f.label :state %>
-<%= f.text_field :state %>
-<%= f.submit "Create my account", class: "btn btn-primary" %> <% end %>
+<%= f.text_field :state , class: 'form-control' %>
+<%= render 'shared/error_messages' %>
+<%= f.submit "subscribe us", class: "btn btn-primary" %> 
+<% end %>
   </div>
 </div>
