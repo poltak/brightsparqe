@@ -4,6 +4,20 @@
 $gray-medium-light: #eaeaea;
 /* universal */
 
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+￼￼￼box-sizing:        border-box;
+}
+
+.debug_dump{
+  clear:both;
+  float:left;
+  width:100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -215,6 +229,18 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+/* forms */
+input, textarea, select, .uneditable-input {
+  color:black;
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+input {
+  height: auto !important;
 }
 
 @media only screen and (min-width: 150px) and (max-width: 525px){

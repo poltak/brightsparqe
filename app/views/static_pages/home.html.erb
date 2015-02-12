@@ -21,7 +21,7 @@
 		<h1><small><strong>Make a Donation</strong></small></h1>
 		<div class="content">
 			<div class="content_left">
-				
+
 			</div>
 			<div class="content_right">
 				
@@ -33,29 +33,29 @@
 	<div class="col-sm-7">
 		<h1><small><strong>Stay in touch!</strong></small></h1>
 		<a class="subtitle">To subscribe to the Bright Sparqe e-Newsletter please give us your name and email address.</a>
-		<form class="form-horizontal" role="form">
-			<div class="form-group">
+		<form class="form-horizontal" role="form" action="/users" id="new_user" method="post">
+	<div class="form-group">
     <label for="inputFirstName3" class="col-sm-3 control-label">First Name</label>
     <div class="col-sm-9">
-      <input  type="text" class="form-control" id="inputFirstName3" placeholder="FirstName">
+      <input  type="text" class="form-control" id="inputFirstName3" name="user[fname]">
     </div>
   </div>
   <div class="form-group">
     <label for="inputLastName3" class="col-sm-3 control-label">Last Name</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" id="inputLastName3" placeholder="LastName">
+      <input type="text" class="form-control" id="inputLastName3" name="user[lname]">
     </div>
   </div>
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
     <div class="col-sm-9">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input type="email" class="form-control" id="inputEmail3" name="user[email]">
     </div>
   </div>
   <div class="form-group">
     <label for="inputState3" class="col-sm-3 control-label">State</label>
     <div class="col-sm-9">
-      <select class="form-control">
+      <select class="form-control" name="user[state]">
   <option>ACT</option>
   <option>NSW</option>
   <option>NT</option>
@@ -73,6 +73,7 @@
       <button type="submit" class="btn btn-default">Submit it</button>
     </div>
   </div>
+<!--   <%= render 'shared/error_messages' %> -->
   <hr/>
   <div class="social" id="form_social">
   	<h4 style="color:white">Follow on us! </h4>
@@ -88,7 +89,6 @@
   <a class="btn btn-social-icon btn-tumblr">
     <i class="fa fa-tumblr"></i>
   </a> 
-
     </div>
 </form>
 	</div>
