@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   get 'supporters'=> 'static_pages#supporters'
 
-  get 'donation' => 'static_pages#donation'
-
+  get 'donations' => 'static_pages#donations'
+  get 'service' => 'static_pages#services'
   get 'contact' => 'static_pages#contact'
   get 'signup' => 'users#new'
 

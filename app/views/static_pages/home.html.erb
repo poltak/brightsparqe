@@ -29,12 +29,13 @@
 		</div>
 	</div>
 </div>
-<div class="row">
+<div class="row" id="sign_up">
 	<div class="col-sm-7">
 		<h1><small><strong>Stay in touch!</strong></small></h1>
 		<a class="subtitle">To subscribe to the Bright Sparqe e-Newsletter please give us your name and email address.</a>
 		<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-8 col-md-offset-2">
+  	<br>
 <%= form_for(@user) do |f| %> 
 <%= f.label :First_Name %>
 <%= f.text_field :fname , class: 'form-control' %>
@@ -43,9 +44,19 @@
 <%= f.label :email %>
 <%= f.email_field :email, class: 'form-control'  %>
 <%= f.label :state %>
-<%= f.text_field :state , class: 'form-control' %>
+ <select class="form-control" name="user[state]">
+  <option>ACT</option>
+  <option>NSW</option>
+  <option>NT</option>
+  <option>QLD</option>
+  <option>SA</option>
+  <option>TAS</option>
+  <option selected="selected">VIC</option>
+  <option>WA</option>
+  <option>Outside Australia</option>
+</select>
 <%= render 'shared/error_messages' %>
-<%= f.submit "subscribe us", class: "btn btn-primary" %> 
+<%= f.submit "Subscribe Us", class: "btn btn-primary" %> 
 <% end %>
   </div>
 </div>
