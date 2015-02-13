@@ -1,9 +1,10 @@
-<div class="center">
+
 	<div class="row">
 		<div class="col-sm-12" id="slider">
 			<%= image_tag("homeless.jpg", :alt => "homeless")%>
 		</div>
 	</div>
+	<div class="center">
 <div class="row">
 	<div class="col-sm-7">
 		<h1><small><strong>Welcome to Bright Sparqe</strong></small></h1>
@@ -36,14 +37,14 @@
 		<div class="row">
   <div class="col-md-8 col-md-offset-2">
   	<br>
-<%= form_for(@user) do |f| %> 
-<%= f.label :First_Name %>
-<%= f.text_field :fname , class: 'form-control' %>
-<%= f.label :Last_Name %>
-<%= f.text_field :lname , class: 'form-control' %>
-<%= f.label :email %>
-<%= f.email_field :email, class: 'form-control'  %>
-<%= f.label :state %>
+	<%= form_for(@user) do |f| %> 
+	<%= f.label :First_Name %>
+	<%= f.text_field :fname , class: 'form-control' %>
+	<%= f.label :Last_Name %>
+	<%= f.text_field :lname , class: 'form-control' %>
+	<%= f.label :email %>
+	<%= f.email_field :email, class: 'form-control'  %>
+	<%= f.label :state %>
  <select class="form-control" name="user[state]">
   <option>ACT</option>
   <option>NSW</option>

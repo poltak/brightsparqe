@@ -7,11 +7,15 @@ class StaticPagesController < ApplicationController
   end
 
   def supporters
+    @user = User.new
   end
 
-  def donation
+  def donations
   end
 
+  def services
+  end
+  
   def contact
   end
 end

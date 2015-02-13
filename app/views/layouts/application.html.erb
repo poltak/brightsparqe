@@ -10,11 +10,13 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container" id="outside_wrap">
+	<div id="inside_wrap">
 	<%= render 'layouts/header'%>
 	<%= yield %>
 	<%= render 'layouts/footer'%>
 	<%= debug(params) if Rails.env.development? %>
+</div>
 </div> <!-- end container div -->
 </body>
 </html>

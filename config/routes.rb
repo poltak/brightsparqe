@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
   
   root 'static_pages#home'
-
   get 'about' => 'static_pages#about'
-
   get 'supporters'=> 'static_pages#supporters'
-
   get 'donations' => 'static_pages#donations'
   get 'service' => 'static_pages#services'
   get 'contact' => 'static_pages#contact'

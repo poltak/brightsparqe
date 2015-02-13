@@ -1,314 +1,353 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
 $gray-medium-light: #eaeaea;
 /* universal */
 
 @mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-￼￼￼box-sizing:        border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    ￼￼￼box-sizing: border-box;
 }
-
-.debug_dump{
-  clear:both;
-  float:left;
-  width:100%;
-  margin-top: 45px;
-  @include box_sizing;
+.debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
 }
-
 html {
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
-
 body {
-  // margin: 0 auto;
-  // width: 70%;
-  // clear: both;
+    // margin: 0 auto;
+    // width: 70%;
+    // clear: both;
 }
-
 section {
-  overflow: auto;
+    overflow: auto;
 }
-
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
-
+.container {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#outside_wrap {
+    box-shadow: rgba(110, 110, 110, .2) 5px 0px 5px;
+}
+#inside_wrap {
+    box-shadow: rgba(110, 110, 110, .2) -5px 0px 5px;
+}
 .center {
-  margin: 0 auto;
-  // padding-left: 10px;
-  text-align: left;
-  h1 {
+    margin: 0 auto;
+    // padding-left: 10px;
+    padding-left: 35px;
+    padding-right: 25px;
     text-align: left;
-    margin-bottom: 10px;
-  }
+    h1 {
+        text-align: left;
+        margin-bottom: 10px;
+    }
 }
-
 /* typography */
-p,a,h1,h2,h3,h4,h5,h6{
-  font-family: "Trebuchet MS" , Tahoma, Arial, sans-serif;
-}
 
+p, a, h1, h2, h3, h4, h5, h6 {
+    font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+}
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+    line-height: 1;
 }
-
 h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
+    font-size: 2.6em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
 }
-
 h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $gray-light;
+    font-size: 1.2em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: $gray-light;
 }
 p {
-  font-size: 0.9em;
-  line-height: 1.5em;
-  color: $gray-light;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    color: $gray-light;
 }
-
-a{
-  color: $gray-light;
+a {
+    color: $gray-light;
 }
-a:hover{
-  color: $gray-light;
-  text-decoration: none;
+a:hover {
+    color: $gray-light;
+    text-decoration: none;
 }
-a:link{
-  text-decoration: none;
+a:link {
+    text-decoration: none;
 }
-
 /* header */
-.page-header{
-  margin-top: 5px;
-  margin-bottom: 0px;
-  img{
-     width: 65%;
-  }
-}
-.logo{
-  display: inline-block;
-  margin-left: 10px;
-}
-.info{
-  // border: 1px solid black;
-  display: inline-block;
-  float: right;
-  padding: 10px;
-  margin-right: 5px
-}
-#topright{
-  // border: 1px solid black;
-  text-align: right;
-}
-#donationToday{
-  // border: 1px solid black;
-  padding: 10px;
-  margin-right: 5px;
-  background-color: #eb348b;
-  color: white;
-  text-decoration: none;
-}
-.social{
-  padding-top: 20px;
-  // border: 1px solid black;
-}
 
+.page-header {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    img {
+        width: 65%;
+    }
+}
+.logo {
+    display: inline-block;
+    margin-left: 10px;
+}
+.info {
+    // border: 1px solid black;
+    display: inline-block;
+    float: right;
+    padding: 10px;
+    margin-right: 5px
+}
+#topright {
+    // border: 1px solid black;
+    text-align: right;
+}
+#donationToday {
+    // border: 1px solid black;
+    padding: 10px;
+    margin-right: 5px;
+    background-color: #eb348b;
+    color: white;
+    text-decoration: none;
+}
+.social {
+    padding-top: 20px;
+    // border: 1px solid black;
+}
 /*navigation*/
 
-.navbar{
-  text-align: center;
-  border: 1px solid black;
-	background-color: #0765c5;
-  .nav{
-  // border: 1px solid black;
-  // margin-left: 10%;
+.navbar {
+    text-align: center;
+    // border: 1px solid black;
+    background-color: #0765c5;
+    .nav {
+        // border: 1px solid black;
+        // margin-left: 10%;
+    }
+    .nav li {
+        padding-right: 30px;
+    }
+    .nav a {
+        color: white
+    }
+    .nav a:hover, .nav .active, .nav a:visited {
+        background-color: #065fb7;
+        color: white;
+    }
 }
-.nav li{
-  padding-right: 30px;
-}
-  .nav a{
-    color: white
-  }
-  .nav a:hover, .nav .active, .nav a:visited{
- background-color: #065fb7;
-  color: white;
-}
-
-}
-.navbar-toggle{
-  border: 1px solid black;
+.navbar-toggle {
+    border: 1px solid black;
 }
 .navbar .navbar-toggle .icon-bar {
     background-color: black;
 }
-
-
 /*home page*/
-#slider {
-  img{
-  width: 100%;
-  height: 240px;
-}
-}
-.subtitle{
-  font-size: 14px;
-}
-#main-subtitle{
-    font-size: 16px;
-  }
-.content{
-  margin-top: 20px;
-  img{
-    width: 80%;
-  }
-}
-.content_left{
-  display: inline-block;
-  float: left;
-  width: 40%;
-  img{
-    width: 100%;
-  }
-}
-.content_right{ 
-  display: inline-block;
-  width: 50%;
-  float: left;
-  margin-left: 5%;
-  text-align: justify;
-}
 
-.form-horizontal{
-  margin-top: 20px;
-  background-color: $gray-light;
-  padding-top: 15px;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 5px;
-  color: white;
-  width: 75%;
+#slider {
+    img {
+        width: 100%;
+        height: 240px;
+    }
 }
-#form_social{
-  margin-top: 0px;
-  padding-top: 0px;
+.subtitle {
+    font-size: 14px;
+}
+#main-subtitle {
+    font-size: 16px;
+}
+.content {
+    margin-top: 20px;
+    img {
+        width: 80%;
+    }
+}
+.content_left {
+    display: inline-block;
+    float: left;
+    width: 40%;
+    img {
+        width: 100%;
+    }
+}
+.content_right {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    margin-left: 5%;
+    text-align: justify;
+}
+.form-horizontal {
+    margin-top: 20px;
+    background-color: $gray-light;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    color: white;
+    width: 75%;
+}
+#form_social {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+/*about us page*/
+
+.profile {
+    margin-bottom: 30px;
+}
+/*supporters/donors list page*/
+
+.list_wrap {
+    margin-bottom: 50px;
+    clear: both;
+}
+.list {
+    list-style: none;
+    padding: 0px;
+}
+.box {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 3px;
+    height: 80px;
+    width: 140px;
+    float: left;
+    // border-radius: 5px;
+    // -webkit-border-radius: 5px;
+    // -moz-border-radius: 5px;
+    box-shadow: rgba(110, 110, 110, .4) 5px 5px 5px;
+    // -webkit-box-shadow:rgba(110,110,110,.4) 5px 5px 5px;
+    img {
+        height: 74px;
+        width: 134px;
+    }
+}
+#list_page_bottom_img {
+    img {
+        height: 300px;
+        width: 430px;
+    }
 }
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
+    clear: both;
+    margin-top: 45px;
+    padding-top: 5px;
+    border-top: 1px solid $gray-medium-light;
+    color: $gray-light;
+    a {
+        color: $gray;
+        &:hover {
+            color: $gray-darker;
+        }
     }
-  }
-  p{
-    font-size: 1.1em;
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
+    p {
+        font-size: 1.1em;
     }
-  }
+    small {
+        float: left;
+    }
+    ul {
+        float: right;
+        list-style: none;
+        li {
+            float: left;
+            margin-left: 15px;
+        }
+    }
 }
-
 /* forms */
-#new_user{
-  border: 1px solid #bbb;
-  padding: 20px;
-  background-color: #eaeaea;
+
+#new_user {
+    border: 1px solid #bbb;
+    padding: 20px;
+    background-color: #eaeaea;
 }
 input, textarea, select, .uneditable-input {
-  color:black;
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 5px;
-  @include box_sizing;
+    color: black;
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 5px;
+    @include box_sizing;
 }
 input {
-  height: auto !important;
+    height: auto !important;
 }
-
 /*error_message*/
+
 #error_explanation {
-  color: red;
-  ul {
-color: red;
-    margin: 0 0 30px 0;
-  }
+    color: red;
+    ul {
+        color: red;
+        margin: 0 0 30px 0;
+    }
 }
 .field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
+    @extend .has-error;
+    .form-control {
+        color: $state-danger-text;
+    }
 }
-
-
-@media only screen and (min-width: 150px) and (max-width: 525px){
-  .page-header{
-  margin-top: 5px;
-  margin-bottom: 0px;
-  img{
-     width: 80%;
-  }
+@media only screen and (min-width: 150px)and(max-width: 992px) {
+    .navbar {
+        .nav li {
+            padding-right: 10px;
+        }
+    }
 }
-  .logo{
-  display: inline-block;
-  margin-left: 0px;
-  width: 180px;
+@media only screen and (min-width: 150px) and (max-width: 525px) {
+    .page-header {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        img {
+            width: 80%;
+        }
+    }
+    .logo {
+        display: inline-block;
+        margin-left: 0px;
+        width: 180px;
+    }
+    #donationToday {
+        display: block;
+        margin-bottom: 2px;
+    }
+    .social {
+        padding-top: 0px;
+    }
+    .info {
+        padding-bottom: 0px;
+    }
+    .navbar {
+        text-align: center;
+        border: 1px solid black;
+        background-color: #0765c5;
+        .nav {
+            // border: 1px solid black;
+            margin-left: 0;
+        }
+        .nav li {
+            padding-right: 0;
+        }
+        .nav a {
+            color: white
+        }
+        .nav a:hover, .nav .active, .nav a:visited {
+            background-color: #065fb7;
+            color: white;
+        }
+    }
+    .form-horizontal {
+        width: 100%;
+    }
 }
-  #donationToday{
-    display: block;
-    margin-bottom: 2px;
-  }
-  .social{
-    padding-top: 0px;
-  }
-  .info{
-    padding-bottom: 0px;
-  }
-  .navbar{
-  text-align: center;
-  border: 1px solid black;
-  background-color: #0765c5;
-  .nav{
-  // border: 1px solid black;
-  margin-left: 0;
-}
-.nav li{
-  padding-right: 0;
-}
-  .nav a{
-    color: white
-  }
-  .nav a:hover, .nav .active, .nav a:visited{
- background-color: #065fb7;
-  color: white;
-}
-}
-.form-horizontal{
-  width: 100%;
-}
-}
-
-

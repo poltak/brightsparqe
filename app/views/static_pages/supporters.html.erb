@@ -1,2 +1,100 @@
-<h1>StaticPages#supporters</h1>
-<p>Find me in app/views/static_pages/supporters.html.erb</p>
+<div class="center">
+	<div>
+	<h1><small><strong>Bright Sparqe Donors</strong></small></h1>
+	<ul class="list">
+		<li class="box">
+			<% d1= image_tag("homeless.jpg", :alt => "homeless")%>
+			<%= link_to d1, "www.baidu.com"%>
+		</li>
+		<li class="box"><%= image_tag("homeless.jpg", :alt => "homeless")%></li>
+		<li class="box"><%= image_tag("homeless.jpg", :alt => "homeless")%></li>
+		<li class="box"><%= image_tag("homeless.jpg", :alt => "homeless")%></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+	</ul>
+	</div>
+	<div class="list_wrap">
+	<h1><small><strong><br>Bright Sparqe Supporters</strong></small></h1>
+	<ul class="list">
+		<li class="box">
+			<% d1= image_tag("homeless.jpg", :alt => "homeless")%>
+			<%= link_to d1, "www.baidu.com"%>
+		</li>
+		<li class="box"><%= image_tag("homeless.jpg", :alt => "homeless")%></li>
+		<li class="box"><%= image_tag("homeless.jpg", :alt => "homeless")%></li>
+		<li class="box"><%= image_tag("homeless.jpg", :alt => "homeless")%></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+		<li class="box"></li>
+	</ul>
+	</div>
+	<div class="list_wrap">
+		<h1><small><strong><br>If you would like support or donate!</strong></small></h1>
+		<div class="row">
+			<div class="col-sm-6">
+				<p>If you organisation would like to support or donate your their products to Bright Sparqe. Please provide us your details and we shall be in touch. </p>
+				<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+<%= form_for(@user) do |f| %> 
+<%= f.label :First_Name %>
+<%= f.text_field :fname , class: 'form-control' %>
+<%= f.label :Last_Name %>
+<%= f.text_field :lname , class: 'form-control' %>
+<%= f.label :email %>
+<%= f.email_field :email, class: 'form-control'  %>
+<%= f.label :state %>
+ <select class="form-control" name="user[state]">
+  <option>ACT</option>
+  <option>NSW</option>
+  <option>NT</option>
+  <option>QLD</option>
+  <option>SA</option>
+  <option>TAS</option>
+  <option selected="selected">VIC</option>
+  <option>WA</option>
+  <option>Outside Australia</option>
+</select>
+<%= render 'shared/error_messages' %>
+<%= f.submit "Subscribe Us", class: "btn btn-primary" %> 
+<% end %>
+  </div>
+</div>
+</div>
+	<br><br><br>
+			<div class="col-sm-6" id="list_page_bottom_img">
+				<%= image_tag("homeless.jpg", :alt => "homeless")%>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>
