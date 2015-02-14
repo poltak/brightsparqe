@@ -1,2 +1,36 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<div class="center">
+
+	<div class="col-sm-10 col-sm-offset-1" id="contact_img">
+		<h1><small><strong>Contact Us</strong></small></h1>
+		<%= image_tag("contact.jpg")%>
+		<p>(pic size 1108*400 2.75)</p>
+	</div>
+	<div class="list_wrap">
+		<h1><small><strong><br>If you would like support or donate!</strong></small></h1>
+		<div class="row">
+			<div class="col-sm-6">
+				<p>If you organisation would like to support or donate your their products to Bright Sparqe. Please provide us your details and we shall be in touch. </p>
+				<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+<%= form_for(@organisation) do |f| %> 
+<%= f.label :Organisation_Name %>
+<%= f.text_field :oname , class: 'form-control' %>
+<%= f.label :Contact_Name %>
+<%= f.text_field :cname , class: 'form-control' %>
+<%= f.label :Contact_Email %>
+<%= f.email_field :email, class: 'form-control'  %>
+<%= f.label :Contact_Phone %>
+<%= f.text_field :phone, class: 'form-control'%>
+<%= render 'shared/error_msg_organisation' %>
+<%= f.submit "SUMBIT", class: "btn btn-primary" %> 
+<% end %>
+  </div>
+</div>
+</div>
+	<br><br><br>
+			<div class="col-sm-6" id="list_page_bottom_img">
+				<%= image_tag("homeless.jpg", :alt => "homeless")%>
+			</div>
+		</div>	
+	</div>
+</div>

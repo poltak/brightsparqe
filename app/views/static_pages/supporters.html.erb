@@ -64,27 +64,17 @@
 				<p>If you organisation would like to support or donate your their products to Bright Sparqe. Please provide us your details and we shall be in touch. </p>
 				<div class="row">
   <div class="col-md-8 col-md-offset-2">
-<%= form_for(@user) do |f| %> 
-<%= f.label :First_Name %>
-<%= f.text_field :fname , class: 'form-control' %>
-<%= f.label :Last_Name %>
-<%= f.text_field :lname , class: 'form-control' %>
-<%= f.label :email %>
+<%= form_for(@organisation) do |f| %> 
+<%= f.label :Organisation_Name %>
+<%= f.text_field :oname , class: 'form-control' %>
+<%= f.label :Contact_Name %>
+<%= f.text_field :cname , class: 'form-control' %>
+<%= f.label :Contact_Email %>
 <%= f.email_field :email, class: 'form-control'  %>
-<%= f.label :state %>
- <select class="form-control" name="user[state]">
-  <option>ACT</option>
-  <option>NSW</option>
-  <option>NT</option>
-  <option>QLD</option>
-  <option>SA</option>
-  <option>TAS</option>
-  <option selected="selected">VIC</option>
-  <option>WA</option>
-  <option>Outside Australia</option>
-</select>
-<%= render 'shared/error_messages' %>
-<%= f.submit "Subscribe Us", class: "btn btn-primary" %> 
+<%= f.label :Contact_Phone %>
+<%= f.text_field :phone, class: 'form-control'%>
+<%= render 'shared/error_msg_organisation' %>
+<%= f.submit "SUMBIT", class: "btn btn-primary" %> 
 <% end %>
   </div>
 </div>
@@ -93,8 +83,6 @@
 			<div class="col-sm-6" id="list_page_bottom_img">
 				<%= image_tag("homeless.jpg", :alt => "homeless")%>
 			</div>
-		</div>
-		
-		
+		</div>	
 	</div>
 </div>

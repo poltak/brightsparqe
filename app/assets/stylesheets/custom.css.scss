@@ -126,6 +126,7 @@ a:link {
 /*navigation*/
 
 .navbar {
+    margin-bottom: 0px;
     text-align: center;
     // border: 1px solid black;
     background-color: #0765c5;
@@ -155,7 +156,7 @@ a:link {
 #slider {
     img {
         width: 100%;
-        height: 240px;
+         height: auto;
     }
 }
 .subtitle {
@@ -200,7 +201,13 @@ a:link {
     padding-top: 0px;
 }
 /*about us page*/
+#about_img {
 
+    img{
+        width:100%;
+        height: 100%;
+     }
+}
 .profile {
     margin-bottom: 30px;
 }
@@ -227,15 +234,23 @@ a:link {
     box-shadow: rgba(110, 110, 110, .4) 5px 5px 5px;
     // -webkit-box-shadow:rgba(110,110,110,.4) 5px 5px 5px;
     img {
-        height: 74px;
-        width: 134px;
+        width: 100%;
+        height: 100%
+        // height: 74px;
+        // width: 134px;
     }
 }
 #list_page_bottom_img {
     img {
-        height: 300px;
-        width: 430px;
+        width:100%
     }
+}
+
+/*contact us page*/
+
+#contact_img {
+    padding: 0px;
+    img{width:100%;height:auto}
 }
 /* footer */
 

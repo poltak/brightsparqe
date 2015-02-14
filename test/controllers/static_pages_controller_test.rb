@@ -16,8 +16,8 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get donation" do
-    get :donation
+  test "should get donations" do
+    get :donations
     assert_response :success
   end
 

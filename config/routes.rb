@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
   
-  get 'organisations/new'
-
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
   get 'supporters'=> 'static_pages#supporters'
   get 'donations' => 'static_pages#donations'
-  get 'service' => 'static_pages#services'
+  get 'services' => 'static_pages#services'
   get 'contact' => 'static_pages#contact'
   get 'signup' => 'users#new'
+  get 'organistation_form' => 'organisations#new'
 
   resources :users
+  resources :organisations
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
