@@ -49,7 +49,8 @@
 			<div class="col-sm-6">
 				<p>If you organisation would like to support or donate your their products to Bright Sparqe. Please provide us your details and we shall be in touch. </p>
 				<div class="row">
-  <div class="col-md-8 col-md-offset-2">
+  <div class="col-md-8 col-md-offset-2 outside_box">
+  	<div class="inside_box">
 <%= form_for(@organisation) do |f| %> 
 <%= f.label :Organisation_Name %>
 <%= f.text_field :oname , class: 'form-control' %>
@@ -62,6 +63,7 @@
 <%= render 'shared/error_msg_organisation' %>
 <%= f.submit "SUMBIT", class: "btn btn-primary" %> 
 <% end %>
+  </div>
   </div>
 </div>
 </div>

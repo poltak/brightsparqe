@@ -32,10 +32,10 @@
 <div class="row" id="sign_up">
 	<div class="col-sm-7">
 		<h1><small><strong>Stay in touch!</strong></small></h1>
-		<a class="subtitle">To subscribe to the Bright Sparqe e-Newsletter please give us your name and email address.</a>
-		<div class="row">
-  <div class="col-md-8 col-md-offset-2">
-  	<br>
+		<p>To subscribe to the Bright Sparqe e-Newsletter please give us your name and email address.</p>
+		<div class="row ">
+  <div class="col-md-8 col-md-offset-2 outside_box">
+  	<div class="inside_box">
 	<%= form_for(@user) do |f| %> 
 	<%= f.label :First_Name %>
 	<%= f.text_field :fname , class: 'form-control' %>
@@ -58,12 +58,13 @@
 <%= render 'shared/error_messages' %>
 <%= f.submit "Subscribe Us", class: "btn btn-primary" %> 
 <% end %>
+</div>
   </div>
 </div>
 	</div>
 	<div class="col-sm-5">
 		<h1><small><strong>Support Bright Sparqe in Victoria</strong></small></h1>
-		<a class="subtitle">Our work currently helps people experiencing homelessness in Victoria. With your generosity and support, our visions is to reach out to people across Australia.</a>
+		<p>Our work currently helps people experiencing homelessness in Victoria. With your generosity and support, our visions is to reach out to people across Australia.</p>
 		<div class="content">
 			<%= image_tag("map.jpg", :alt => "map")%>
 		</div>
