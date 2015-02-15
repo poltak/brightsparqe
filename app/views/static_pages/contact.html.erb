@@ -12,16 +12,17 @@
 			<div class="row inside_box">
 				<!-- <div class="inside_box"> -->
 				<div class="col-sm-6 ">
-					<%= form_for(@organisation) do |f| %> 
-					<%= f.label :Organisation_Name %>
-					<%= f.text_field :oname , class: 'form-control' %>
-					<%= f.label :Contact_Name %>
-					<%= f.text_field :cname , class: 'form-control' %>
-					<%= f.label :Contact_Email %>
+					<%= form_for(@feedback) do |f| %> 
+					<b>First Name *</b>
+					<%= f.text_field :fname , class: 'form-control' %>
+					<b>Last Name *</b>
+					<%= f.text_field :lname , class: 'form-control' %>
+					<b>Contact Email *</b>
 					<%= f.email_field :email, class: 'form-control'  %>
-					<%= f.label :Contact_Phone %>
-					<%= f.text_field :phone, class: 'form-control'%>
-					<%= render 'shared/error_msg_organisation' %>
+					<b>Comments *</b>
+
+					<%= f.text_area :comments, rows:10, class: 'form-control'%>
+					<%= render 'shared/error_msg_feedback' %>
 					<%= f.submit "SUMBIT", class: "btn btn-primary" %> 
 					<% end %>
 				</div>

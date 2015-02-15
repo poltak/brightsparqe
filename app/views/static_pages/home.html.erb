@@ -37,13 +37,13 @@
   <div class="col-md-8 col-md-offset-2 outside_box">
   	<div class="inside_box">
 	<%= form_for(@user) do |f| %> 
-	<%= f.label :First_Name %>
+	<b>First Name *</b>
 	<%= f.text_field :fname , class: 'form-control' %>
-	<%= f.label :Last_Name %>
+	<b>Last Name *</b>
 	<%= f.text_field :lname , class: 'form-control' %>
-	<%= f.label :email %>
+	<b>Email *</b>
 	<%= f.email_field :email, class: 'form-control'  %>
-	<%= f.label :state %>
+	<b>State *</b>
  <select class="form-control" name="user[state]">
   <option>ACT</option>
   <option>NSW</option>

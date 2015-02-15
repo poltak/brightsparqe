@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'feedbacks/new'
+
   root 'static_pages#home'
   get 'about' => 'static_pages#about'
   get 'supporters'=> 'static_pages#supporters'
@@ -8,9 +10,11 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   get 'signup' => 'users#new'
   get 'organistation_form' => 'organisations#new'
+  # get 'feedback_form' => 'feedbacks#new'
 
   resources :users
   resources :organisations
+  resources :feedbacks
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

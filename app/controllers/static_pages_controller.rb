@@ -18,6 +18,6 @@ class StaticPagesController < ApplicationController
   end
   
   def contact
-    @organisation = Organisation.new
+    @feedback = Feedback.new
   end
 end
