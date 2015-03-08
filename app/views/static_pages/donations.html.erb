@@ -1,4 +1,4 @@
- <form action='/payresult' class='pin' method='post'>
+ <form action='/donations' class='pin' method='post'>
   <div class='errors' style='display:none'>
     <h3></h3>
     <ul></ul>
@@ -101,7 +101,6 @@ $(function() {
       .attr({type: 'hidden', name: 'card_token'})
       .val(card.token)
       .appendTo(form);
-      alert(form.get(0));
     // Resubmit the form to the server
     //
     // Only the card_token will be submitted to your server. The

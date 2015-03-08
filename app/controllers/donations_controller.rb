@@ -3,6 +3,7 @@ class DonationsController < ApplicationController
   end
 
   def create
+  	
   end
 
   def show

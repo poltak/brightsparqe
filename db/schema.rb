@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150215125811) do
+ActiveRecord::Schema.define(version: 20150308150140) do
+
+  create_table "donations", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone_number"
+    t.string   "address"
+    t.string   "suburb"
+    t.string   "state"
+    t.string   "country"
+    t.string   "postcode"
+    t.string   "message"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "amount"
+  end
 
   create_table "feedbacks", force: true do |t|
     t.string   "fname"
