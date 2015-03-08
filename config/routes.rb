@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'donations/new'
+
+  get 'donations/create'
+
+  get 'donations/show'
+
   get 'feedbacks/new'
 
   root 'static_pages#home'
@@ -9,6 +15,7 @@ Rails.application.routes.draw do
   get 'services' => 'static_pages#services'
   get 'contact' => 'static_pages#contact'
   get 'signup' => 'users#new'
+  get 'payresult' => 'static_pages#payresult'
   get 'organistation_form' => 'organisations#new'
   # get 'feedback_form' => 'feedbacks#new'
 

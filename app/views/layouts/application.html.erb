@@ -7,15 +7,18 @@
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim'%>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src='https://cdn.pin.net.au/pin.v2.js'></script>
 </head>
 <body>
 
-<div class="container" id="outside_wrap">
+<div class="container">
+  <div id="outside_wrap">
 	<div id="inside_wrap">
 	<%= render 'layouts/header'%>
 	<%= yield %>
 	<%= render 'layouts/footer'%>
 	<%= debug(params) if Rails.env.development? %>
+</div>
 </div>
 </div> <!-- end container div -->
 </body>

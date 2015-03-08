@@ -19,7 +19,7 @@ html {
     overflow-y: scroll;
 }
 body {
-    // margin: 0 auto;
+     margin: 0 auto;
     // width: 70%;
     // clear: both;
 }
@@ -31,7 +31,7 @@ textarea {
 }
 .container {
     padding-left: 0px;
-    padding-right: 0px;
+    padding-right: 0%;
 }
 #outside_wrap {
     box-shadow: rgba(110, 110, 110, .2) 5px 0px 5px;
@@ -105,7 +105,6 @@ a:link {
     display: inline-block;
     float: right;
     padding: 10px;
-    margin-right: 5px
 }
 #topright {
     // border: 1px solid black;
@@ -133,6 +132,7 @@ a:link {
     .nav {
         // border: 1px solid black;
         // margin-left: 10%;
+        margin: 0 auto;
     }
     .nav li {
         padding-right: 30px;
@@ -259,31 +259,80 @@ a:link {
 }
 /* footer */
 
-footer {
-    clear: both;
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid $gray-medium-light;
-    color: $gray-light;
-    a {
-        color: $gray;
-        &:hover {
-            color: $gray-darker;
+// footer {
+
+//     clear: both;
+//     margin-top: 45px;
+//     padding-top: 5px;
+//     // border-top: 1px solid $gray-medium-light;
+//     color: $gray-light;
+//     a {
+//         color: $gray;
+//         &:hover {
+//             color: $gray-darker;
+//         }
+//     }
+//     p {
+//         font-size: 1.1em;
+//     }
+//     small {
+//         float: left;
+//     }
+//     ul {
+//         float: right;
+//         list-style: none;
+//         li {
+//             float: left;
+//             margin-left: 15px;
+//         }
+//     }
+//     .footer1{
+//         background-color: #A5AFB1;
+//         width: 100%;
+//         height: 40px;
+//     };
+//     .footer2{
+//         background-color: #C1CDD0;
+//         width: 100%;
+
+//         height: 100px;
+//     }
+// }
+footer{
+    margin-top: 20px;
+    nav{
+        margin: 0 auto;
+        background-color:#A5AFB1;
+        width: 100%;
+        height: 60px;
+        a:link, a:visited{
+            color: #505050;
+            display: inline-block;
+            padding: 20px 20px;
+            height: 20px;
         }
-    }
-    p {
-        font-size: 1.1em;
-    }
-    small {
-        float: left;
-    }
-    ul {
-        float: right;
-        list-style: none;
-        li {
-            float: left;
-            margin-left: 15px;
+        // position: center;
+        ul{
+            // position: center;
+            
+            list-style: none;
+            li{
+                float: left;
+                display: inline;
+            }
         }
+       
+
+    }
+     .footer1{
+        background-color: #A5AFB1;
+        width: 100%;
+        height: 40px;
+    };
+    .footer2{
+        background-color: #C1CDD0;
+        width: 100%;
+        height: 80px;
     }
 }
 /* forms */
@@ -307,7 +356,7 @@ form {
     // border: 1px solid #bbb;
     // padding: 20px;
     // background-color: #eaeaea;
-    color: white;
+    // color: white;
 }
 input, textarea, select, .uneditable-input {
     color: black;
@@ -335,13 +384,27 @@ input {
     }
 }
 @media only screen and (min-width: 150px)and(max-width: 992px) {
+        .container {
+    padding: 0px;
+}
+    .info {
+        padding: 10px 10px 0px 0px;
+    }
     .navbar {
         .nav li {
             padding-right: 10px;
         }
     }
+        footer{
+        nav{
+            display: none;
+        }
+    }
 }
 @media only screen and (min-width: 150px) and (max-width: 525px) {
+    .container {
+    padding: 0px;
+}
     .page-header {
         margin-top: 5px;
         margin-bottom: 0px;
@@ -352,7 +415,7 @@ input {
     .logo {
         display: inline-block;
         margin-left: 0px;
-        width: 180px;
+        width: 160px;
     }
     #donationToday {
         display: block;
@@ -362,8 +425,12 @@ input {
         padding-top: 0px;
     }
     .info {
-        padding-bottom: 0px;
+        padding: 10px 5px 0px 0px;
+        #topright{
+        display:none;
     }
+    }
+
     .navbar {
         text-align: center;
         border: 1px solid black;
@@ -385,5 +452,10 @@ input {
     }
     .form-horizontal {
         width: 100%;
+    }
+    footer{
+        nav{
+            display: none;
+        }
     }
 }
