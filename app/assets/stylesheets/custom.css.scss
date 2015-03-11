@@ -412,6 +412,8 @@ input {
     }
 }
 @media only screen and (min-width: 150px) and (max-width: 525px) {
+
+
     .container {
     padding: 0px;
 }
@@ -460,6 +462,21 @@ input {
             color: white;
         }
     }
+    .content_left {
+    display: block;
+    // float: left;
+     width: 100%;
+    // img {
+    //     width: 100%;
+    // }
+}
+.content_right {
+    display: block;
+     width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    // text-align: justify;
+}
     .form-horizontal {
         width: 100%;
     }
