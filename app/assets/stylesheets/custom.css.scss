@@ -50,8 +50,13 @@ textarea {
         margin-bottom: 10px;
     }
 }
-/* typography */
 
+/* typography */
+form{
+    h3,label{
+        // color: white;
+    }
+}
 p, a, h1, h2, h3, h4, h5, h6 {
     font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
 }
@@ -298,8 +303,13 @@ a:link {
 //         height: 100px;
 //     }
 // }
+
+.donate-screen {
+  margin: 0 0 30px;
+}
 footer{
     margin-top: 20px;
+    clear: both;
     nav{
         margin: 0 auto;
         background-color:#A5AFB1;

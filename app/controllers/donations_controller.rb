@@ -1,7 +1,7 @@
 require "net/http"
 class DonationsController < ApplicationController
   def new
-
+  	@donation = Donation.new
   end
 
   def create
@@ -16,10 +16,9 @@ class DonationsController < ApplicationController
 	end
 	case res
 	when Net::HTTPSuccess, Net::HTTPRedirection
-  		@message = res.value
+		render 'success'
 	else
-		render 'show'
-  	 @message = res.value
+		render 'failure'
 	end
   	 # @donation = Donation.new(address:params[:address])
   	 # @donation.save
@@ -27,7 +26,7 @@ class DonationsController < ApplicationController
 
   end
 
-  def show
+  def success
   	@card_token = params[:card_token]
   	debugger
   end
