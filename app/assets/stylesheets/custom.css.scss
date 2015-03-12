@@ -433,8 +433,11 @@ input {
         display: block;
         margin-bottom: 2px;
     }
+
     .social {
-        padding-top: 0px;
+        .btn{visibility: hidden;}
+        // padding-top: 0px;
+        
     }
     .info {
         padding: 10px 5px 0px 0px;
