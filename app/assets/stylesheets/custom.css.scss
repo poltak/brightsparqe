@@ -39,6 +39,10 @@ textarea {
 #inside_wrap {
     box-shadow: rgba(110, 110, 110, .2) -5px 0px 5px;
 }
+#wrap{
+    margin-top: 0px;
+    max-width: 978px;
+}
 .center {
     margin: 0 auto;
     // padding-left: 10px;
@@ -435,8 +439,8 @@ input {
     }
 
     .social {
-        .btn{visibility: hidden;}
-        // padding-top: 0px;
+        // .btn{visibility: hidden;}
+        padding-top: 0px;
         
     }
     .info {
