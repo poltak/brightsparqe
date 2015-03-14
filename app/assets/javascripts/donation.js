@@ -1,6 +1,10 @@
 
 // 1. Wait for the page to load
+
+
 $(function() {
+  alert("hello");
+
   // 2. Create an API object with your publishable api key, and
   // specifying 'test' or 'live'.
   //
@@ -43,9 +47,7 @@ $(function() {
     };
 
     // Request a token for the card from Pin Payments
-    pinApi.createCardToken(card).then(handleSuccess, handleError).done();
-    alert(card.token);
-  });
+    pinApi.createCardToken(card).then(handleSuccess, handleError).done(); 
 
   function handleSuccess(card) {
     // alert(card.name+ card.token+card.expiry_year+card.address_line1);

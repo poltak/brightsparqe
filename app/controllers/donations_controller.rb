@@ -5,13 +5,20 @@ class DonationsController < ApplicationController
   end
 
   def create
+  	puts "xxxxxxxxxxxxxxxx"+request.remote_ip
   	@token = params[:card_token]
+  	@email = params[:email]
+  	@name = params[:name]
+  	@phone = params[:phone]
+  	@description = params[:description]
 	uri = URI.parse('https://test-api.pin.net.au/1/charges')
 	res = Net::HTTP.start(uri.host, uri.port,:use_ssl => uri.scheme == 'https') do |http|
 		req = Net::HTTP::Post.new(uri.path)
 		req.basic_auth '6gf2Czf2xc4VoNpy3waq1Q', ' '
-		req.set_form_data({'email' => 'linkchiu007@gmail.com','amount' => '800', 
-			'currency' => "USD",'description' => 'for test charge','ip_address' => '118.139.3.129','card_token' => @token})
+		# req.set_form_data({'email' => 'linkchiu007@gmail.com','amount' => '800', 
+		# 	'currency' => "USD",'description' => 'for test charge','ip_address' => '118.139.3.129','card_token' => @token})
+		req.set_form_data({'email' => @email,'amount' => '800', 
+			'currency' => "AUD",'description' =>@description,'ip_address' => '118.139.3.129','card_token' => @token})
 		http.request(req)
 	end
 	case res
