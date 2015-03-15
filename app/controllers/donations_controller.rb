@@ -5,7 +5,6 @@ class DonationsController < ApplicationController
   end
 
   def create
-  	puts "xxxxxxxxxxxxxxxx"+request.remote_ip
   	@token = params[:card_token]
   	@email = params[:email]
   	@name = params[:name]

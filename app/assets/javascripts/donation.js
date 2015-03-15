@@ -3,7 +3,7 @@
 
 
 $(function() {
-  alert("hello");
+  // alert("hello");
 
   // 2. Create an API object with your publishable api key, and
   // specifying 'test' or 'live'.
