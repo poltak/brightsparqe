@@ -1,7 +1,4 @@
-
 // 1. Wait for the page to load
-
-
 $(function() {
   // alert("hello");
 
