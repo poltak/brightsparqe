@@ -10,19 +10,23 @@ class DonationsController < ApplicationController
   	@name = params[:name]
   	@phone = params[:phone]
   	@description = params[:description]
+    @amount = params[:amount].to_f
+    @amount_post = (@amount*100).to_i #post时需要四位整数
+    puts @amount_post
+  	puts "#{@name+@email+@description}"
 	uri = URI.parse('https://test-api.pin.net.au/1/charges')
 	res = Net::HTTP.start(uri.host, uri.port,:use_ssl => uri.scheme == 'https') do |http|
 		req = Net::HTTP::Post.new(uri.path)
 		req.basic_auth '6gf2Czf2xc4VoNpy3waq1Q', ' '
-		# req.set_form_data({'email' => 'linkchiu007@gmail.com','amount' => '800', 
-		# 	'currency' => "USD",'description' => 'for test charge','ip_address' => '118.139.3.129','card_token' => @token})
-		req.set_form_data({'email' => @email,'amount' => '800', 
-			'currency' => "AUD",'description' =>@description,'ip_address' => '118.139.3.129','card_token' => @token})
+		req.set_form_data({'email' => @email,'amount' => @amount_post, 'currency' => "AUD",'description' => @description,'ip_address' => '118.139.3.129','card_token' => @token})
+		# req.set_form_data({'email' => @email,'amount' => '800', 
+		# 	'currency' => "AUD",'description' =>@description,'ip_address' => '118.139.3.129','card_token' => @token})
 		http.request(req)
 	end
 	case res
 	when Net::HTTPSuccess, Net::HTTPRedirection
-		render 'success'
+		# render 'success'
+    redirect_to '/donations/show'
 	else
 		render 'failure'
 	end
@@ -32,6 +36,8 @@ class DonationsController < ApplicationController
 
   end
 
+  def show
+  end
   def success
   	@card_token = params[:card_token]
   	debugger
