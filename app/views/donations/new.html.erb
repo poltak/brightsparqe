@@ -394,14 +394,7 @@
   <script src='https://cdn.pin.net.au/pin.v2.js'></script>
   <script type="text/javascript">
 $(function(){
-    function testnull()
-        {
-            if (document.getElementById('name').value=='')
-            {
-                alert('null');
-                document.getElementById('name').focus();
-            }
-        } 
+
     $('#amount').numeric(); //using jquery.numeric.min.js plugin
     $('.donate-amount-bt').click(function(event) {
         $('#amount').attr('value', $(this).val());
@@ -419,6 +412,16 @@ $(function(){
       errorHeading = errorContainer.find('h3');
 form.submit(function(e) {
     e.preventDefault();
+    if (document.getElementById('name').value=='')
+        {
+            document.getElementById('name').focus();
+        }else if(document.getElementById('email').value==''){
+            document.getElementById('email').focus();
+        }
+    if(document.getElementById('description').value==''){
+        document.getElementById('description').value = 'none';
+    }
+
 
     // Clear previous errors
     errorList.empty();
