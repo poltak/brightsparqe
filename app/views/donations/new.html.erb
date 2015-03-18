@@ -23,10 +23,10 @@
             <h3><strong>Donate to Bright Sparqe</strong></h3> 
             <br>
           <div class="row">
-              <div class="col-sm-6"><button type="button" class="btn btn-primary btn-lg btn-block donate-amount-bt" value="30">$30</button></div>
+              <div class="col-sm-6"><button type="button" class="btn btn-primary btn-lg btn-block donate-amount-bt" value="30" style = "margin-bottom:10px">$30</button></div>
               <div class="col-sm-6"><button type="button" class="btn btn-primary btn-lg btn-block donate-amount-bt" value="50">$50</button></div>
           </div>   
-          <div class="row">
+          <div class="row" style = "margin-bottom:10px">
             <div class="col-sm-6"><button type="button" class="btn btn-primary btn-lg btn-block donate-amount-bt" value="100">$100</button></div>
               <div class="col-sm-6"><button type="button" class="btn btn-primary btn-lg btn-block donate-amount-bt" value="300">$300</button></div>
       </div>
@@ -395,7 +395,7 @@
   <script type="text/javascript">
 $(function(){
 
-    $('#amount').numeric(); //using jquery.numeric.min.js plugin
+    // $('#amount').numeric(); //using jquery.numeric.min.js plugin
     $('.donate-amount-bt').click(function(event) {
         $('#amount').attr('value', $(this).val());
         $('#donate-btn').attr('value', 'DONATE $'+$(this).val());
