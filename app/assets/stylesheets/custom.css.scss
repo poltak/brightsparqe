@@ -96,6 +96,9 @@ a:hover {
 a:link {
     text-decoration: none;
 }
+a:active{
+    color:red;
+}
 /* header */
 
 .page-header {
@@ -149,7 +152,7 @@ a:link {
     .nav a {
         color: white
     }
-    .nav a:hover, .nav .active, .nav a:visited {
+    .nav a:hover, .nav a:visited , .nav .active{
         background-color: #065fb7;
         color: white;
     }
@@ -232,7 +235,7 @@ a:link {
     padding: 0px;
 }
 .box {
-    margin-right: 5px;
+    margin-right: 15px;
     margin-bottom: 5px;
     padding: 3px;
     height: 110px;
@@ -386,7 +389,7 @@ input {
         }
     }
 }
-@media only screen and (min-width: 150px) and (max-width: 525px) {
+@media only screen and (min-width: 150px) and (max-width: 536px) {
 
 
     .container {
