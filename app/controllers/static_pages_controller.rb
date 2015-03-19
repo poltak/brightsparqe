@@ -2,7 +2,7 @@ require "json"
 class StaticPagesController < ApplicationController
   def home
     @user = User.new
-
+    
     i=1
     next_hint = 0
     total_charge = 0
@@ -29,6 +29,8 @@ class StaticPagesController < ApplicationController
       break if next_hint.blank?
     end 
     puts total_charge/100
+    @total=total_charge/100.to_f
+    puts "#{@total}"
   end
 
   def about
