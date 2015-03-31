@@ -19,7 +19,7 @@ class DonationsController < ApplicationController
     @state = params[:state]
     @country = params[:country]
     @postcode = params[:postcode]
-    @donation = Donation.new(name:@name,email:@email,address:@address,phone_number:@phone,suburb:@city,state:@state,country:@country,postcode:@postcode,message:@description,amount:@amount)
+    # @donation = Donation.new(name:@name,email:@email,address:@address,phone_number:@phone,suburb:@city,state:@state,country:@country,postcode:@postcode,message:@description,amount:@amount)
   	# puts "#{@name+@email+@description+@address + @city +@country}"
 	uri = URI.parse('https://test-api.pin.net.au/1/charges')
 	res = Net::HTTP.start(uri.host, uri.port,:use_ssl => uri.scheme == 'https') do |http|
@@ -32,11 +32,11 @@ class DonationsController < ApplicationController
 	end
 	case res
 	when Net::HTTPSuccess, Net::HTTPRedirection
-    if @donation.save
+    # if @donation.save
       redirect_to '/donations/show'
-    else 
-		render 'failure'
-  end    
+  #   else 
+		# render 'failure'
+  # end    
 	else
 		render 'failure'
 	end
