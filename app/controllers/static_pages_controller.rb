@@ -2,9 +2,8 @@ require "json"
 class StaticPagesController < ApplicationController
   def home
     @user = User.new
-    # @total = Donation.sum(:amount)
+     @total = Donation.sum(:amount)
     # puts "#{@total}........"
-    @total = 100.0
 
     # i=1
     # next_hint = 0
