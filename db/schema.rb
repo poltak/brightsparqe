@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308150140) do
+ActiveRecord::Schema.define(version: 20150331073638) do
 
   create_table "donations", force: true do |t|
     t.string   "name"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150308150140) do
     t.string   "message"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.string   "amount"
+    t.float    "amount"
   end
 
   create_table "feedbacks", force: true do |t|

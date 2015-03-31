@@ -1,5 +1,4 @@
 <div class="row">
-	<% @total %>
 	<div class="col-sm-12" id="slider">
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -126,7 +125,6 @@
 <script src="https://cdn.pin.net.au/pin.v2.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script>
-	$(function () { 
     $('#chart').highcharts({
 	    credits: {  
 	  		enabled: false  
@@ -157,5 +155,4 @@
             data: [<%= @total %>]
         }]
     });
-});
 </script>
