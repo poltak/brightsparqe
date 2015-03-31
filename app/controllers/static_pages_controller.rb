@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
   def home
     @user = User.new
     @total = Donation.sum(:amount)
-    puts "#{@total}........"
+    # puts "#{@total}........"
     
 
     # i=1
