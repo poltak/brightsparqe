@@ -16,8 +16,11 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
 
   	if @user.save
-      flash[:success] = "sucess..."
-  		render 'show'
+    #   flash[:success] = "sucess..."
+  		# render 'show'
+      # Tell the UserMailer to send a welcome email after save
+        UserMailer.welcome_email(@user).deliver
+        render 'show'
   	else 
   		# redirect_to '/'
       render 'static_pages/home'

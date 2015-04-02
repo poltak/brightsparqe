@@ -33,6 +33,7 @@ class DonationsController < ApplicationController
 	case res
 	when Net::HTTPSuccess, Net::HTTPRedirection
      if @donation.save
+      DonatorMailer.success_email(@donation).deliver
       redirect_to '/donations/show'
      else 
 		 render 'failure'
