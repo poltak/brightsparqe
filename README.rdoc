@@ -1,3 +1,3 @@
 == README
 
-Bright Sparqe Websit by linc
+Bright Sparqe Website by linc
